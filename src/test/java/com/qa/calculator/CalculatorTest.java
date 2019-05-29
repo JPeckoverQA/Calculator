@@ -1,5 +1,7 @@
 package com.qa.calculator;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -17,8 +19,9 @@ public class CalculatorTest {
 	public void subtraction() {
 		Calculator calc = new Calculator();
 		Subtraction subtract = new Subtraction();
-		double actualValue = calc.subtract(5.0, 2.0);
-		Assert.assertEquals("subtraction error", 3, actualValue);
+		//setNum1 = 5
+		//setNum2 = 2
+		assertEquals("subtraction error", 3.0, subtract.subtract(5.0,2.0),0);
 	}
 	
 	@Test
